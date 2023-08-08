@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #282B30;
+    color: #ffffff;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000 !important;
+}
+
+.container {
+    padding: 25px 160px;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover, .nav-list a.active {
+    text-decoration: underline;
+    text-decoration-color: #3F8CFF;
+    text-underline-offset: 10px;
+}
+
+ul {
+    display: inline;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.theme-switcher {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 1px;
+    width: 45px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.round-button {
+    background-color: #3F8CFF;
+    height: 23px;
+    width: 23px;
+    border-radius: 25px;
+}
+
+/* SELF INTRO STYLING */
+
+.self-intro {
+    margin-top: 80px;
+    padding: 0px 15vw;
+    justify-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.potrait {
+    padding-right: 50px;
+}
+
+.potrait img {
+    max-height: 450px;
+    max-width: 390px;
+    box-shadow: 6px 8px 4px 0px rgba(0, 0,0, .25);
+    border-radius: 15px;
+    object-fit: fill;
+}
+
+.text .name {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.text .position {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 50px;
+    letter-spacing: 2px;
+    padding: 15px 0px;
+}
+
+.text .message {
+    font-size: 16px;
+}
+
+/* Tech Stack */
+
+.tech-stack {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-stack-title {
+    font-size: 32px;
+    padding-bottom: 35px;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 74px;
+    background-color: #ffffff;
+    border: 5px solid #6C5DD3;
+    border-radius: 15px;
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.tech-icons img {
+    max-width: 64px;
+    padding: 5px;
+}
+
+.wip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 60px;
+}
+
+.wip p {
+    font-size: 64px;
+}
