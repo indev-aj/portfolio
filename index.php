@@ -13,12 +13,12 @@
     
 <div class="container">
 
-    <?php include_once('./header.php') ?>
+    <?php include_once('./header.php')   ?>
 
     <!-- Body -->
     <div class="self-intro">
         <div class="potrait">
-            <img src="./images/potrait 2.jpg" alt="">
+            <img src="./images/potrait.jpg" alt="">
         </div>
         
         <div class="text">
@@ -31,16 +31,16 @@
     <div class="tech-stack">
         <div class="tech-stack-title">Tech Stack</div>
         <div class="tech-icons">
-            <div class="icon-box"><img src="./icons/tech/html-5.png" alt="html logo"></div>
-            <div class="icon-box"><img src="./icons/tech/css-3.png" alt="css logo"></div>
-            <div class="icon-box"><img src="./icons/tech/javascript.png" alt="javascript logo"></div>
-            <div class="icon-box"><img src="./icons/tech/php.png" alt="php logo"></div>
-            <div class="icon-box"><img src="./icons/tech/mysql.png" alt="mysql logo"></div>
-            <div class="icon-box"><img src="./icons/tech/python.png" alt="python logo"></div>
-            <div class="icon-box"><img src="./icons/tech/django.png" alt="django logo"></div>
-            <div class="icon-box"><img src="./icons/tech/flutter.png" alt="flutter logo"></div>
-            <div class="icon-box"><img src="./icons/tech/office.png" alt="office logo"></div>
-            <div class="icon-box"><img src="./icons/tech/vscode.png" alt="vscode logo"></div>
+            <div class="icon-box"><img src="./icons/tech/html-5.png" alt="html logo" title="HTML"></div>
+            <div class="icon-box"><img src="./icons/tech/css-3.png" alt="css logo" title="CSS"></div>
+            <div class="icon-box"><img src="./icons/tech/javascript.jpg" alt="javascript logo" title="Javascript"></div>
+            <div class="icon-box"><img src="./icons/tech/php.png" alt="php logo" title="PHP"></div>
+            <div class="icon-box"><img src="./icons/tech/mysql.png" alt="mysql logo" title="MySQL"></div>
+            <div class="icon-box"><img src="./icons/tech/python.png" alt="python logo" title="Python"></div>
+            <div class="icon-box"><img src="./icons/tech/django.png" alt="django logo" title="Django"></div>
+            <div class="icon-box"><img src="./icons/tech/flutter.png" alt="flutter logo" title="Flutter"></div>
+            <div class="icon-box"><img src="./icons/tech/office.png" alt="office logo" title="MS Office"></div>
+            <div class="icon-box"><img src="./icons/tech/vscode.png" alt="vscode logo" title="VS Code"></div>
            
         </div>
     </div>

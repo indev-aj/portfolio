@@ -45,10 +45,25 @@ body {
     align-items: center;
 }
 
-.navbar a:hover, .nav-list a.active {
-    text-decoration: underline;
-    text-decoration-color: #3F8CFF;
-    text-underline-offset: 10px;
+.navbar a {
+    position: relative; 
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: -2px; /* Adjust as needed */
+    width: 0;
+    height: 2px;
+    background-color: #3F8CFF;
+    transition: width 0.3s ease; /* Transition the width property */
+    transform: translateX(-50%); /* Center the line */
+}
+
+.navbar a:hover::after,
+.nav-list a.active::after {
+    width: 100%; /* Grow the width to 100% on hover */
 }
 
 ul {
@@ -73,6 +88,7 @@ ul {
     width: 45px;
     height: 25px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .round-button {
