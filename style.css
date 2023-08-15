@@ -116,7 +116,7 @@ ul {
 /* SELF INTRO STYLING */
 
 .self-intro {
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 0px 15vw;
     justify-items: center;
     display: flex;
@@ -146,7 +146,7 @@ ul {
     text-transform: uppercase;
     line-height: 50px;
     letter-spacing: 2px;
-    padding: 15px 0px;
+    padding: 10px 0px;
 }
 
 .text .message {
@@ -300,7 +300,6 @@ ul {
 
     .nav-list {
         padding: 15px 0px;
-        /* padding-bottom: 15px; */
         position: fixed;
         left: -100%;
         top: 50px;
@@ -311,7 +310,6 @@ ul {
         transition: 0.3s;
         border-top: 3px solid #6C5DD3;
         border-bottom: 3px solid #6C5DD3;
-        /* box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, .25); */
     }
 
     .nav-list.active {
@@ -334,6 +332,81 @@ ul {
     .theme-switcher {
         display: none;
     }
+
+    /* About Page */
+
+    .self-intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .potrait {
+        padding: 0px;
+    }
+
+    .potrait img {
+        width: 200px;
+    }
+
+    .text {
+        margin-top: 12px;
+    }
+
+    .text .position {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 30px;
+    }
+
+    .text .message, .text .name {
+        font-size: 12px;
+    }
+
+    .tech-stack {
+        padding-top: 45px;
+    }
+
+    .tech-stack-title {
+        font-size: 16px;
+        padding-bottom: 35px;
+    }
+
+    .icon-box {
+        margin-right: 15px;
+    }
+
+    /* Project Page */
+
+    .project-section {
+        margin-top: 50px;
+    }
+
+    .project-section-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .projects {
+        width: 100%;
+    }
+
+    .project-thumbnail {
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+    
+    .project-subtitle {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+    /* WIP Page */
 
     .wip img {
         box-shadow: none;
