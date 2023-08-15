@@ -11,6 +11,11 @@
         <div class="theme-switcher" onclick="changeTheme()">
             <div class="round-button"><a href=""></a></div>
         </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 </div>
 
