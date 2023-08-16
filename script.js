@@ -1,14 +1,18 @@
 const currentLocation = location.href;
+
 const navbar = document.getElementsByClassName("header-container");
 const links = navbar[0].querySelectorAll("a");
 
 const hamburger = document.querySelector(".hamburger");
 const navlist = document.querySelector(".nav-list");
 
-hamburger.addEventListener("click", () => {
+const switchButton = document.getElementsByClassName("theme-switcher");
+const body = document.body;
+
+function menu() {
     hamburger.classList.toggle("active");
     navlist.classList.toggle("active");
-})
+}
 
 // Set active class to change the styling on navbar items
 // Skip the first element cuz that's logo
@@ -29,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Change theme to light
-let switchButton = document.getElementsByClassName("theme-switcher");
-let body = document.body;
 function changeTheme() {
     body.classList.toggle("light-mode");
 
