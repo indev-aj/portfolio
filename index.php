@@ -25,6 +25,10 @@
             <div class="name">Amrin Jaffni</div>
             <div class="position">Backend developer and<br>translator</div>
             <div class="message">Hoping to build project for those in needs</div>
+            <div class="socmed">
+                <a href="https://github.com/indev-aj" target="_blank"><img src="./icons/github.png" alt="github icon"></a>
+                <a href="https://www.linkedin.com/in/amrin-jaffni/" target="_blank"><img src="./icons/linkedin.png" alt="github icon"></a>
+            </div>
         </div>
     </div>
 
