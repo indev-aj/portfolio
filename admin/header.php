@@ -10,6 +10,12 @@
             <li><a href="./bio.php">Bio</a></li>
         </ul>
     </div>
+
+    <div class="hamburger" onclick="menu()" style="display: none;">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </div>
 
 <script src="../script.js"></script>
