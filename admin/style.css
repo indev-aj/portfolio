@@ -185,6 +185,7 @@ input[type="month"] {
 .delete-btn>img {
     height: 40px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .add-task-btn {
@@ -195,4 +196,14 @@ input[type="month"] {
     font-size: 18px;
     width: fit-content;
     height: fit-content;
+}
+
+/* *********** */
+/* Bio Styling */
+/* *********** */
+
+.speaking-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center items */
+    margin-top: 40px;
 }
