@@ -19,7 +19,7 @@
         <?php include_once('./header.php') ?>
 
         <div class="main-section">
-            <div class="page-title">Add New Award</div>
+            <div class="page-title">Add New Project</div>
             <div class="card">
                 <form action="" method="post">
                     <div class="column">

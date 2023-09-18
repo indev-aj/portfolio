@@ -57,11 +57,17 @@ input {
     }
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     font-size: 18px;
 }
 
-.submit-btn {
+input[type="month"] {
+    width: 45%;
+    margin-right: 0;
+}
+
+.submit-btn, .add-task-btn {
     background-color: #3F8CFF;
     color: white;
     font-weight: bold;
@@ -90,7 +96,7 @@ input[type="text"], input[type="password"] {
     width: 400px;
 }
 
-.input-summary {
+.input-summary, .input-task {
     display: block;
     background-color: white;
     color: black;
@@ -107,9 +113,9 @@ input[type="text"], input[type="password"] {
     }
 
     &:empty:before {
-        content:attr(data-placeholder);
+        content: attr(data-placeholder);
         color: gray;
-      }
+    }
 }
 
 .upload-area {
@@ -130,4 +136,63 @@ input[type="text"], input[type="password"] {
 .preview-img {
     height: 160px;
     border-radius: 15px;
+}
+
+/* ************* */
+/* Skill Styling */
+/* ************* */
+
+.preview-img-skill {
+    height: 74px;
+    width: 74px;
+    border-radius: 15px;
+}
+
+.skill-dropdown {
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    border-radius: 15px;
+    border-right: 10px solid transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/* ****************** */
+/* Experience Styling */
+/* ****************** */
+
+.task-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+.input-task-container {
+    flex-grow: 1; 
+    flex-shrink: 1;
+    margin-right: 10px;
+    min-width: 90%;
+}
+
+.input-task {
+    min-height: 0px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.delete-btn>img {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.add-task-btn {
+    display: block;
+    background-color: #6C5DD3;
+    margin-top: 0px;
+    margin-right: 0%;
+    font-size: 18px;
+    width: fit-content;
+    height: fit-content;
 }
