@@ -8,6 +8,7 @@ body {
     background-color: #282B30;
     color: #ffffff;
     font-family: 'Poppins', 'sans-serif';
+    transition: background-color 0.3s, color 0.3s;
 }
 
 img {
@@ -16,9 +17,15 @@ img {
     object-fit: fill;
 }
 
+#github-img {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 .light-mode {
     background-color: #ffffff;
     color: #000000 !important;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -93,13 +100,18 @@ ul {
 }
 
 .theme-switcher {
-    display: inline-block;
-    background-color: #ffffff;
+    /* display: inline-block; */
+    /* background-color: #ffffff;
     padding: 1px;
     width: 45px;
     height: 25px;
-    border-radius: 15px;
+    border-radius: 15px; */
     cursor: pointer;
+
+    &>img {
+        box-shadow: none;
+        border-radius: none;
+    }
 }
 
 .round-button {
@@ -378,7 +390,8 @@ ul {
         line-height: 30px;
     }
 
-    .text .message, .text .name {
+    .text .message,
+    .text .name {
         font-size: 12px;
     }
 
@@ -418,7 +431,7 @@ ul {
     .project-title {
         font-size: 18px;
     }
-    
+
     .project-subtitle {
         font-size: 12px;
         margin-top: 0px;

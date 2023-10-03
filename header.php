@@ -9,7 +9,7 @@
             <li><a href="./contact.php">Contact</a></li>
         </ul>
         <div class="theme-switcher" onclick="changeTheme()">
-            <div class="round-button"><a href=""></a></div>
+            <img src="./icons/light-mode-icon.png" id="theme-switcher-img">
         </div>
         <div class="hamburger" onclick="menu()">
             <div class="bar"></div>

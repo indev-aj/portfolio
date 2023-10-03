@@ -4,9 +4,10 @@ const navbar = document.getElementsByClassName("header-container");
 const links = navbar[0].querySelectorAll("a");
 
 const hamburger = document.querySelector(".hamburger");
+const hamburger_bar = document.querySelector(".bar");
 const navlist = document.querySelector(".nav-list");
 
-const switchButton = document.getElementsByClassName("theme-switcher");
+const themeSwitchImg = document.getElementById("theme-switcher-img");
 const body = document.body;
 
 function menu() {
@@ -34,15 +35,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Change theme to light
 function changeTheme() {
-    body.classList.toggle("light-mode");
+    let darkIcon = "./icons/dark-mode-icon.png";
+    let lightIcon = "./icons/light-mode-icon.png";
 
+    let githubLight = "./icons/github.png";
+    let githubDark = "./icons/github-dark.png";
+
+    body.classList.toggle("light-mode");
+    
     if (body.classList.contains("light-mode")) {
+        themeSwitchImg.src = darkIcon;
+
+        document.getElementById("github-img").src = githubDark;
+        
         for (let i = 0; i < links.length; i++) {
             links[i].style.color = "black";
         }
 
         localStorage.setItem("theme", "light-mode");
     } else {
+        themeSwitchImg.src = lightIcon;
+
+        document.getElementById("github-img").src = githubLight;
+
         for (let i = 0; i < links.length; i++) {
             links[i].style.color = "white";
         }
