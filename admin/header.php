@@ -1,3 +1,7 @@
+<?
+
+require_once('./service/db.php'); ?>
+
 <!-- Navbar -->
 <div class="header-container">
     <div class="logo"><a href="./index.php">INDEV</a></div>

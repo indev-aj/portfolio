@@ -21,16 +21,17 @@
         <div class="main-section">
             <div class="page-title">Login</div>
             <div class="card">
-                <form action="" method="post">
+                <form action="./service/login.php" method="post">
                     <div class="input-username">
                         <label for="username">username</label>
                         <input type="text" name="username" id="username" placeholder="Username" required>
                     </div>
-                    <div class="inpu-password">
+                    <div class="input-password">
                         <label for="password">password</label>
                         <input type="password" name="password" id="password" placeholder="Strong Password" required>
                     </div>
-                    <input type="button" value="LOGIN" class="submit-btn" onclick="console.log('helo')">
+                    <input type="submit" value="LOGIN" name="login" class="submit-btn">
+                    <a href="./register.php">Create an account</a>
                 </form>
             </div>
         </div>
