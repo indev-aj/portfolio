@@ -16,7 +16,19 @@
 
     <div class="container">
 
-        <?php include_once('./header.php') ?>
+        <!-- Navbar -->
+        <div class="header-container">
+            <div class="logo"><a href="./index.php">INDEV</a></div>
+            <div class="navbar" style="font-size: 24px;">
+                Login to gain access
+            </div>
+
+            <div class="hamburger" onclick="menu()" style="display: none;">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
 
         <div class="main-section">
             <div class="page-title">Register</div>
@@ -43,7 +55,7 @@
                         <input type="text" name="phone" id="phone" placeholder="+60xxxxxxxxx" required>
                     </div>
                     <input type="submit" value="REGISTER" name="register" class="submit-btn">
-                    <a href="./index.php">Login</a>
+                    <a href="./index.php" style="color: white;">Login</a>
                 </form>
             </div>
         </div>

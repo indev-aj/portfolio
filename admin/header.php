@@ -1,10 +1,13 @@
 <?
 
-require_once('./service/db.php'); ?>
+require_once('./service/db.php'); 
+include("./service/auth_session.php");
+?>
+
 
 <!-- Navbar -->
 <div class="header-container">
-    <div class="logo"><a href="./index.php">INDEV</a></div>
+    <div class="logo"><a href="./bio.php">INDEV</a></div>
     <div class="navbar">
         <ul class="nav-list">
             <li><a href="./project.php">Project</a></li>
@@ -12,6 +15,7 @@ require_once('./service/db.php'); ?>
             <li><a href="./award.php">Award</a></li>
             <li><a href="./skill.php">Skill</a></li>
             <li><a href="./bio.php">Bio</a></li>
+            <li><a href="./service/logout.php">Logout</a></li>
         </ul>
     </div>
 

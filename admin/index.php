@@ -1,3 +1,5 @@
+<?php require_once('./service/db.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +18,19 @@
 
     <div class="container">
 
-        <?php include_once('./header.php') ?>
+        <!-- Navbar -->
+        <div class="header-container">
+            <div class="logo"><a href="./index.php">INDEV</a></div>
+            <div class="navbar" style="font-size: 24px;">
+                Login to gain access
+            </div>
+
+            <div class="hamburger" onclick="menu()" style="display: none;">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
 
         <div class="main-section">
             <div class="page-title">Login</div>
@@ -31,13 +45,14 @@
                         <input type="password" name="password" id="password" placeholder="Strong Password" required>
                     </div>
                     <input type="submit" value="LOGIN" name="login" class="submit-btn">
-                    <a href="./register.php">Create an account</a>
+                    <a href="./register.php" style="color: white;">Create an account</a>
                 </form>
             </div>
         </div>
-
+        
     </div>
-
+    
+    <script src="../script.js"></script>
 </body>
 
 </html>

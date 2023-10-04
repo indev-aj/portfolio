@@ -12,6 +12,8 @@ if (isset($_POST['register'])) {
     // hash password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+    // TODO: Check if username exist, username should be unique and can't be the same as others
+
     $sql = "INSERT INTO User (username, password, name, phone, email) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
@@ -26,7 +28,7 @@ if (isset($_POST['register'])) {
         echo "Data insertion succesfull!";
         $stmt->close();
 
-        header("Location: https://indevtechnology.com/portfolio/admin/login.php");
+        header("Location: https://indevtechnology.com/portfolio/admin/index.php");
     } else {
         echo "Error: " . $stmt->error;
         $stmt->close();

@@ -1,3 +1,8 @@
+<?php
+    include("./service/auth_session.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +31,7 @@
                     <div class="column">
                         <div class="col-item">
                             <label for="name">name</label>
-                            <input type="text" name="name" id="name" placeholder="John Smith" required>
+                            <input type="text" name="name" id="name" placeholder="<?php echo $_SESSION['username'];?>" required>
                         </div>
                         <div class="col-item">
                             <label for="phone">phone</label>
