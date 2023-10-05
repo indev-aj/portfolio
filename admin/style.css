@@ -136,7 +136,9 @@ input[type="month"] {
 
 .preview-img {
     height: 160px;
+    width: 115px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 /* ************* */

@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
 </head>
 
@@ -45,7 +44,7 @@
                         <input type="password" name="password" id="password" placeholder="Strong Password" required>
                     </div>
                     <input type="submit" value="LOGIN" name="login" class="submit-btn">
-                    <a href="./register.php" style="color: white;">Create an account</a>
+                    <a href="./register.php" style="color: white; text-decoration:none">Create an account</a>
                 </form>
             </div>
         </div>

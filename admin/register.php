@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
 </head>
 
@@ -55,7 +54,7 @@
                         <input type="text" name="phone" id="phone" placeholder="+60xxxxxxxxx" required>
                     </div>
                     <input type="submit" value="REGISTER" name="register" class="submit-btn">
-                    <a href="./index.php" style="color: white;">Login</a>
+                    <a href="./index.php" style="color: white;text-decoration:none">Login</a>
                 </form>
             </div>
         </div>

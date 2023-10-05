@@ -4,3 +4,4 @@ function getSummary() {
 
     input_summary.value = summary.innerText;
 }
+

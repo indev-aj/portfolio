@@ -26,4 +26,6 @@ include("./service/auth_session.php");
     </div>
 </div>
 
+
+<script src="./script.js"></script>
 <script src="../script.js"></script>
