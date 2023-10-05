@@ -97,7 +97,7 @@ input[type="month"] {
     width: 400px;
 }
 
-.input-summary, .input-task {
+.input-summary, .input-task, .input-language {
     display: block;
     background-color: white;
     color: black;
@@ -172,15 +172,17 @@ input[type="month"] {
     align-items: center; /* Vertically center items */
 }
 
-.input-task-container {
+.input-task-container,
+.input-language-container {
     flex-grow: 1; 
     flex-shrink: 1;
     margin-right: 10px;
     min-width: 90%;
 }
 
-.input-task {
-    min-height: 0px;
+.input-task,
+.input-language {
+    /* min-height: 0px; */
     word-wrap: break-word;
     margin-bottom: 10px;
 }
