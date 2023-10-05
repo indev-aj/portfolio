@@ -34,5 +34,5 @@ if (isset($_POST['register'])) {
         $stmt->close();
 
         header("Location: https://indevtechnology.com/portfolio/admin/register.php");
-    }    
+    }
 }
