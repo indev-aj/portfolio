@@ -9,20 +9,24 @@ if (isset($_REQUEST)) {
     $username = $_SESSION['username'];
     $user = $_SESSION['user'];
 
-
+    // Get uploaded image
     if (isset($_FILES["thumbnail"]) && $_FILES["thumbnail"]["error"] == UPLOAD_ERR_OK) {
-        // ... Rest of your code for handling the file upload ...
         // thumbnail's folder
         $target_dir = "../thumbnail/" . $user['id'] . "/bio/";
         $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]);
+
+        $tempPath=$_FILES["thumbnail"]["tmp_name"];
 
         // Create the target directory if it doesn't exist
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true); // Adjust permissions as needed
         }
 
+        $imageQuality = 35;
+        $compressedImg = compressImg($tempPath, $target_dir, $imageQuality);
+
         // Move the uploaded file to the specified directory
-        if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
+        if (move_uploaded_file($compressedImg, $target_file)) {
             echo "The file " . basename($_FILES["thumbnail"]["name"]) . " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
@@ -33,7 +37,6 @@ if (isset($_REQUEST)) {
         switch ($uploadError) {
             case UPLOAD_ERR_OK:
                 // File uploaded successfully
-                // ... Rest of your code for handling the file upload ...
                 break;
             case UPLOAD_ERR_INI_SIZE:
                 echo "The uploaded file exceeds the upload_max_filesize directive in php.ini.";
@@ -84,4 +87,29 @@ if (isset($_REQUEST)) {
 
         // header("Location: https://indevtechnology.com/portfolio/admin/register.php");
     }
+}
+
+function compressImg($tempPath, $originalPath, $imageQuality) {
+    $imgInfo = getimagesize($tempPath);
+    $mime = $imgInfo['mime'];
+    
+    // create new image from file
+    switch($mime) {
+        case 'image/jpeg': 
+            $image = imagecreatefromjpeg($tempPath); 
+            break; 
+        case 'image/png': 
+            $image = imagecreatefrompng($tempPath); 
+            break; 
+        case 'image/gif': 
+            $image = imagecreatefromgif($tempPath); 
+            break; 
+        default: 
+            $image = imagecreatefromjpeg($tempPath); 
+    }
+
+    imagejpeg($image, $originalPath, $imageQuality);    
+
+    // Return compressed image 
+    return $originalPath;
 }

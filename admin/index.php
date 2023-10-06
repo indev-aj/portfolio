@@ -1,4 +1,14 @@
-<?php require_once('./service/db.php'); ?>
+<?php 
+
+require_once('./service/db.php');
+
+session_start();
+if (isset($_SESSION["username"])) {
+    header("Location: https://indevtechnology.com/portfolio/admin/bio.php");
+    exit();
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +58,9 @@
                 </form>
             </div>
         </div>
-        
+
     </div>
-    
+
     <script src="../script.js"></script>
 </body>
 

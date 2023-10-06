@@ -13,12 +13,25 @@
     
 <div class="container">
 
-    <?php include_once('./header.php')   ?>
+    <?php 
+    include_once('./header.php'); 
+    $username = "amrin";
+    $sql = "SELECT thumbnail FROM User WHERE username=?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->bind_result($thumbnail);
+    $stmt->fetch();
+    $stmt->close();
+    
+    $thumbnail = substr($thumbnail, 2);
+    ?>
 
     <!-- Body -->
     <div class="self-intro">
         <div class="potrait">
-            <img src="./images/potrait.jpg" alt="">
+            <img src="<?php echo "./admin/" . $thumbnail ?>" alt="">
         </div>
         
         <div class="text">
