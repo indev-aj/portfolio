@@ -8,10 +8,12 @@ function getSummary() {
     input_language = document.getElementById("input-language");
     language = document.getElementsByClassName("input-language")[0];
 
-    var l = language.innerText.split(",");
+    // if (language.innerText != '')
+    //     var l = language.innerText.split(",");
+    //     input_language.value = l;
 
     input_summary.value = summary.innerText;
-    input_language.value = l;
+    
 }
 
 // select image and preview

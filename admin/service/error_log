@@ -1,4 +1,0 @@
-[03-Oct-2023 10:17:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home/indevtec/public_html/portfolio/admin/service/register.php:14
-Stack trace:
-#0 {main}
-  thrown in /home/indevtec/public_html/portfolio/admin/service/register.php on line 14

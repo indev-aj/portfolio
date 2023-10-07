@@ -141,6 +141,13 @@ input[type="month"] {
     object-fit: cover;
 }
 
+.preview-img-project {
+    height: 250px;
+    width: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
 /* ************* */
 /* Skill Styling */
 /* ************* */

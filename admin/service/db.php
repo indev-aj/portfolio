@@ -1,9 +1,17 @@
 <?php
 
-$servername ="localhost";
-$username = "indevtec_amrin";
-$password = "aj_120478_Zero";
-$dbname = "indevtec_personal_portfolio";
+$root = dirname(__DIR__, 2);
+$vendor = $root . '/vendor/autoload.php';
+require_once realpath($vendor);
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$servername = $_ENV["SERVER_NAME"];
+$username = $_ENV["DB_USERNAME"];
+$password = $_ENV["DB_PASSWORD"];
+$dbname = $_ENV["DB_NAME"];
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 

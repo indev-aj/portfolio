@@ -20,7 +20,7 @@
         <div class="main-section">
             <div class="page-title">Add New Project</div>
             <div class="card">
-                <form action="" method="post">
+                <form action="./service/add_project.php" method="post">
                     <div class="column">
                         <div class="col-item">
                             <label for="title">title</label>
@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-item">
                             <label for="year">Subtitle</label>
-                            <input type="text" name="year" id="year" placeholder="eg. Final year project" required>
+                            <input type="text" name="subtitle" id="subtitle" placeholder="eg. Final year project" required>
                         </div>
                     </div>
                     <label for="input-summary">summary</label>
@@ -36,8 +36,9 @@
                     <div contenteditable="true" class="input-summary" data-placeholder="Enter text here"></div>
 
                     <div class="column">
-                        <div class="col-item" onclick="">
+                    <div class="col-item">
                             <label>thumbnail</label>
+                            <input type="file" name="thumbnail" id="thumbnail">
                             <div class="upload-area">
                                 <img src="../icons/upload.png" alt="">
                                 <p>Drag and Drop Image Over Here</p>
@@ -45,7 +46,7 @@
                         </div>
                         <div class="col-item">
                             <label class="preview-label">thumbnail preview</label>
-                            <img src="../images/img-placeholder.svg" alt="" class="preview-img">
+                            <img src="../images/350x250.svg" alt="" class="preview-img-project preview-img">
                         </div>
                     </div>
 
