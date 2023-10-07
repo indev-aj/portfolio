@@ -35,9 +35,10 @@
                     <input type="text" name="input-summary" id="input-summary" style="display: none">
                     <div contenteditable="true" class="input-summary" data-placeholder="Enter text here"></div>
 
+                    <!-- Image Content -->
                     <div class="column">
-                    <div class="col-item">
-                            <label>thumbnail</label>
+                        <div class="col-item">
+                            <label for="thumbnail">thumbnail</label>
                             <input type="file" name="thumbnail" id="thumbnail">
                             <div class="upload-area">
                                 <img src="../icons/upload.png" alt="">
@@ -46,7 +47,9 @@
                         </div>
                         <div class="col-item">
                             <label class="preview-label">thumbnail preview</label>
-                            <img src="../images/350x250.svg" alt="" class="preview-img-project preview-img">
+
+                            
+                            <img src="<?php if(!empty($user['thumbnail']))  echo "admin/" . $user['thumbnail']; else echo "../images/350x250.svg";?>" alt="" class="preview-img preview-img-project">
                         </div>
                     </div>
 
@@ -57,9 +60,6 @@
 
     </div>
 
-    <script>
-        
-    </script>
 </body>
 
 </html>

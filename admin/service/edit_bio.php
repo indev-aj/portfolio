@@ -22,11 +22,8 @@ if (isset($_REQUEST)) {
             mkdir($target_dir, 0777, true); // Adjust permissions as needed
         }
 
-        $imageQuality = 35;
-        $compressedImg = compressImg($tempPath, $target_dir, $imageQuality);
-
         // Move the uploaded file to the specified directory
-        if (move_uploaded_file($compressedImg, $target_file)) {
+        if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
             echo "The file " . basename($_FILES["thumbnail"]["name"]) . " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
@@ -80,15 +77,21 @@ if (isset($_REQUEST)) {
     if ($stmt->execute()) {
         $stmt->close();
 
-        // header("Location: https://indevtechnology.com/portfolio/admin/bio.php");
+        header("Location: https://indevtechnology.com/portfolio/admin/bio.php");
+        exit();
     } else {
         echo "Error: " . $stmt->error;
         $stmt->close();
 
-        // header("Location: https://indevtechnology.com/portfolio/admin/register.php");
+        echo "<br><h3>You'll be redirected back to bio page in 5 seconds...</h3>";
+        sleep(5);
+
+        header("Location: https://indevtechnology.com/portfolio/admin/register.php");
+        exit();
     }
 }
 
+// TODO Fix this compression function
 function compressImg($tempPath, $originalPath, $imageQuality) {
     $imgInfo = getimagesize($tempPath);
     $mime = $imgInfo['mime'];

@@ -8,6 +8,8 @@ function getSummary() {
     input_language = document.getElementById("input-language");
     language = document.getElementsByClassName("input-language")[0];
 
+    // ! change this to summary-type input
+    // ! this code is causing bug where page that doesnt have this input field giving error 
     // if (language.innerText != '')
     //     var l = language.innerText.split(",");
     //     input_language.value = l;

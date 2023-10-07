@@ -1,7 +1,6 @@
 <?php
 
 include_once('./db.php');
-require_once('./helper.php');
 session_start();
 
 if (isset($_REQUEST)) {
@@ -12,24 +11,22 @@ if (isset($_REQUEST)) {
     $subtitle = !empty($_POST["subtitle"]) ? $conn->real_escape_string($_POST['subtitle']) : "";
     $summary = !empty($_POST["input-summary"]) ? $conn->real_escape_string($_POST['input-summary']) : "";
 
+   
     // Get uploaded image
     if (isset($_FILES["thumbnail"]) && $_FILES["thumbnail"]["error"] == UPLOAD_ERR_OK) {
         // thumbnail's folder
-        $target_dir = "../thumbnail/" . $user['id'] . "/project/" . $title . "/";
+        $target_dir = "../thumbnail/" . $user['id'] . "/project/$title/";
         $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]);
 
-        $tempPath = $_FILES["thumbnail"]["tmp_name"];
+        $tempPath=$_FILES["thumbnail"]["tmp_name"];
 
         // Create the target directory if it doesn't exist
         if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true); // Adjust permissions as needed
         }
 
-        $imageQuality = 35;
-        $compressedImg = compressImg($tempPath, $target_dir, $imageQuality);
-
         // Move the uploaded file to the specified directory
-        if (move_uploaded_file($compressedImg, $target_file)) {
+        if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
             echo "The file " . basename($_FILES["thumbnail"]["name"]) . " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
@@ -37,7 +34,7 @@ if (isset($_REQUEST)) {
     } else {
         echo "Error during file upload.";
         $uploadError = $_FILES["thumbnail"]["error"];
-        echo $uploadError;
+        echo "error: " . $uploadError;
         switch ($uploadError) {
             case UPLOAD_ERR_OK:
                 // File uploaded successfully
