@@ -20,7 +20,7 @@
         <div class="main-section">
             <div class="page-title">Add New Project</div>
             <div class="card">
-                <form action="./service/add_project.php" method="post">
+                <form action="./service/add_project.php" method="post" enctype="multipart/form-data">
                     <div class="column">
                         <div class="col-item">
                             <label for="title">title</label>

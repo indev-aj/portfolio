@@ -73,8 +73,8 @@ if (isset($_REQUEST)) {
     if ($stmt->execute()) {
         $stmt->close();
 
-        // header("Location: https://indevtechnology.com/portfolio/admin/project.php");
-        // exit();
+        header("Location: https://indevtechnology.com/portfolio/admin/project.php");
+        exit();
     } else {
         echo "Error: " . $stmt->error;
         $stmt->close();
