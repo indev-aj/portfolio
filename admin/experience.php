@@ -20,7 +20,7 @@
         <div class="main-section">
             <div class="page-title">Add New Experience</div>
             <div class="card">
-                <form action="" method="post">
+                <form action="./service/add_experience.php" method="post">
                     <div class="column">
                         <div class="col-item">
                             <label for="title">title</label>
@@ -54,16 +54,16 @@
                     <div class="task-container">
                         <div class="input-task-container">
                             <label for="input-task">Task</label>
-                            <input type="text" name="input-task" id="input-task" style="display: none">
+                            <input type="text" name="input-task[]" id="input-task" style="display: none">
                             <div contenteditable="true" class="input-task" data-placeholder="Enter text here"></div>
                         </div>
                         <div class="delete-btn">
                             <img src="../icons/cross.png" alt="">
                         </div>
-                        <input type="button" value="Add Task" name="add-task" class="add-task-btn">
+                        <input type="button" value="Add Task" name="add-task" class="add-task-btn" onclick="addTask()">
                     </div>
 
-                    <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getSummary()">
+                    <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getExp()">
                 </form>
             </div>
         </div>

@@ -177,6 +177,7 @@ input[type="month"] {
 .task-container {
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Vertically center items */
+    flex-wrap: wrap;
 }
 
 .input-task-container,
@@ -204,7 +205,6 @@ input[type="month"] {
     display: block;
     background-color: #6C5DD3;
     margin-top: 0px;
-    margin-right: 0%;
     font-size: 18px;
     width: fit-content;
     height: fit-content;

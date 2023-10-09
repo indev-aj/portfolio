@@ -15,7 +15,72 @@ function getSummary() {
     //     input_language.value = l;
 
     input_summary.value = summary.innerText;
-    
+}
+
+function getExp() {
+    // Get all elements with the class "input-task"
+    var inputTaskElements = document.querySelectorAll('.input-task');
+
+    // Convert the NodeList to an array using Array.from()
+    var inputTaskArray = Array.from(inputTaskElements);
+
+    // Loop through each input-task element
+    inputTaskArray.forEach(function (inputTaskElement) {
+        // Get the corresponding input field with the same index
+        var index = inputTaskArray.indexOf(inputTaskElement);
+        var inputField = document.querySelectorAll('input[name="input-task[]"]')[index];
+
+        // Transfer the value from the div to the input field
+        inputField.value = inputTaskElement.textContent;
+        console.log(inputField.value);
+    });
+
+}
+
+function addTask() {
+    // Create a new input field
+    var newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.name = 'input-task[]';
+    newInput.id = 'input-task';
+    newInput.style.display = 'none';
+
+    // Create a new editable div
+    var newDiv = document.createElement('div');
+    newDiv.contentEditable = true;
+    newDiv.className = 'input-task';
+    newDiv.setAttribute('data-placeholder', 'Enter text here');
+
+    // Create a new delete button
+    var newDeleteBtn = document.createElement('div');
+    newDeleteBtn.className = 'delete-btn';
+    newDeleteBtn.addEventListener('click', function () {
+        // Remove the parent container when the delete button is clicked
+        taskContainer.removeChild(newInputTaskContainerDiv);
+        taskContainer.removeChild(newDeleteBtn);
+    });
+
+    var newImg = document.createElement('img');
+    newImg.src = '../icons/cross.png';
+    newDeleteBtn.appendChild(newImg);
+
+    // Create a new input task container div
+    var newInputTaskContainerDiv = document.createElement('div');
+    newInputTaskContainerDiv.className = "input-task-container";
+
+    // Get the existing task container
+    var taskContainer = document.querySelector('.task-container');
+
+    // Append the new input, div, to new input task container div
+    newInputTaskContainerDiv.appendChild(newInput);
+    newInputTaskContainerDiv.appendChild(newDiv);
+
+    // Get the add task button
+    var addTaskButton = document.querySelector('.add-task-btn');
+
+    // Append input task container and button to the existing taskcontainer
+    taskContainer.insertBefore(newInputTaskContainerDiv, addTaskButton);
+    taskContainer.insertBefore(newDeleteBtn, addTaskButton);
 }
 
 // select image and preview
