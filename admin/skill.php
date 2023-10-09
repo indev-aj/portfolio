@@ -20,7 +20,7 @@
         <div class="main-section">
             <div class="page-title">Add New Skill</div>
             <div class="card">
-                <form action="" method="post">
+                <form action="./service/add_skill.php" method="post" enctype="multipart/form-data">
                     <div class="column">
                         <div class="col-item">
                             <label for="title">title</label>
@@ -38,9 +38,11 @@
                         </div>
                     </div>
 
+                    <!-- Image Content -->
                     <div class="column">
-                        <div class="col-item" onclick="">
-                            <label>thumbnail</label>
+                        <div class="col-item">
+                            <label for="thumbnail">thumbnail</label>
+                            <input type="file" name="thumbnail" id="thumbnail">
                             <div class="upload-area">
                                 <img src="../icons/upload.png" alt="">
                                 <p>Drag and Drop Image Over Here</p>
@@ -48,11 +50,13 @@
                         </div>
                         <div class="col-item">
                             <label class="preview-label">thumbnail preview</label>
-                            <img src="../images/74x74.svg" alt="" class="preview-img-skill">
+
+                            
+                            <img src="<?php if(!empty($user['thumbnail']))  echo "admin/" . $user['thumbnail']; else echo "../images/74x74.svg";?>" alt="" class="preview-img preview-img-skill">
                         </div>
                     </div>
 
-                    <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getSummary()">
+                    <input type="submit" value="submit" name='submit' class="submit-btn">
                 </form>
             </div>
         </div>
