@@ -56,11 +56,11 @@
                             <label for="input-task">Task</label>
                             <input type="text" name="input-task" id="input-task" style="display: none">
                             <div contenteditable="true" class="input-task" data-placeholder="Enter text here"></div>
-                            <input type="button" value="Add Task" name="add-task" class="add-task-btn">
                         </div>
                         <div class="delete-btn">
                             <img src="../icons/cross.png" alt="">
                         </div>
+                        <input type="button" value="Add Task" name="add-task" class="add-task-btn">
                     </div>
 
                     <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getSummary()">

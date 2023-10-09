@@ -21,7 +21,7 @@
         <div class="main-section">
             <div class="page-title">Add New Award</div>
             <div class="card">
-                <form action="" method="post">
+                <form action="./service/add_award.php" method="post">
                     <div class="column">
                         <div class="col-item">
                             <label for="title">title</label>
@@ -36,7 +36,7 @@
                     <input type="text" name="input-summary" id="input-summary" style="display: none">
                     <div contenteditable="true" class="input-summary" data-placeholder="Enter text here"></div>
 
-                    <input type="button" value="SUBMIT" class="submit-btn" onclick="">
+                    <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getSummary()">
                 </form>
             </div>
         </div>
