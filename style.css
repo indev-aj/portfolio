@@ -257,7 +257,7 @@ ul {
 .projects {
     width: 1270px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -290,10 +290,10 @@ ul {
     margin-bottom: 10px;
 }
 
-.project-summary {
+/* .project-summary {
     max-height: 150px;
-    overflow: hidden;
-}
+    overflow: scroll;
+} */
 
 .bar {
     display: none;
