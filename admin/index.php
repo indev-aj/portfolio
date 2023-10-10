@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once('./service/db.php');
 
@@ -27,17 +27,15 @@ if (isset($_SESSION["username"])) {
 
     <div class="container">
 
-        <!-- Navbar -->
         <div class="header-container">
-            <div class="logo"><a href="./index.php">INDEV</a></div>
-            <div class="navbar" style="font-size: 24px;">
-                Login to gain access
-            </div>
-
-            <div class="hamburger" onclick="menu()" style="display: none;">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="logo"><a href="./bio.php">INDEV</a></div>
+            <div class="navbar">
+                <p style="font-size: 24px;">Login to gain acess</p>
+                <div class="hamburger" onclick="menu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
         </div>
 
@@ -54,7 +52,7 @@ if (isset($_SESSION["username"])) {
                         <input type="password" name="password" id="password" placeholder="Strong Password" required>
                     </div>
                     <input type="submit" value="LOGIN" name="login" class="submit-btn">
-                    <a href="./register.php" style="color: white; text-decoration:none">Create an account</a>
+                    <a href="./register.php" class="register-link" style="color: white; text-decoration:none">Create an account</a>
                 </form>
             </div>
         </div>
