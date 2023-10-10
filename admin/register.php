@@ -17,15 +17,14 @@
 
         <!-- Navbar -->
         <div class="header-container">
-            <div class="logo"><a href="./index.php">INDEV</a></div>
-            <div class="navbar" style="font-size: 24px;">
-                Login to gain access
-            </div>
-
-            <div class="hamburger" onclick="menu()" style="display: none;">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="logo"><a href="./bio.php">INDEV</a></div>
+            <div class="navbar">
+                <p style="font-size: 24px;">Login to gain acess</p>
+                <div class="hamburger" onclick="menu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
         </div>
 
@@ -54,7 +53,7 @@
                         <input type="text" name="phone" id="phone" placeholder="+60xxxxxxxxx" required>
                     </div>
                     <input type="submit" value="REGISTER" name="register" class="submit-btn">
-                    <a href="./index.php" style="color: white;text-decoration:none">Login</a>
+                    <a href="./index.php" class="register-link" style="color: white;text-decoration:none">Login</a>
                 </form>
             </div>
         </div>
