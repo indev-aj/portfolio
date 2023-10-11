@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,62 +10,71 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
 </head>
+
 <body>
-    
-<div class="container">
 
-    <?php 
-    include_once('./header.php'); 
-    $username = "amrin";
-    $sql = "SELECT thumbnail FROM User WHERE username=?";
+    <div class="container">
 
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->bind_result($thumbnail);
-    $stmt->fetch();
-    $stmt->close();
-    
-    $thumbnail = substr($thumbnail, 2);
-    ?>
+        <?php
+        include_once('./header.php');
+        $username = "amrin";
+        $sql = "SELECT * FROM User where username='$username'";
+        $result = $conn->query($sql);
 
-    <!-- Body -->
-    <div class="self-intro">
-        <div class="potrait">
-            <img src="<?php echo "./admin/" . $thumbnail ?>" alt="">
-        </div>
-        
-        <div class="text">
-            <div class="name">Amrin Jaffni</div>
-            <div class="position">Backend developer and<br>translator</div>
-            <div class="message">Hoping to build project for those in needs</div>
-            <div class="socmed">
-                <a href="https://github.com/indev-aj" target="_blank"><img src="./icons/github.png" id="github-img" alt="github icon"></a>
-                <a href="https://www.linkedin.com/in/amrin-jaffni/" target="_blank"><img src="./icons/linkedin.png" alt="github icon"></a>
+        $user;
+
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+        }
+
+        $thumbnail = substr($user['thumbnail'], 2);
+        ?>
+
+        <!-- Body -->
+        <div class="self-intro">
+            <div class="potrait">
+                <img src="<?php echo "./admin/" . $thumbnail ?>" alt="">
+            </div>
+
+            <div class="text">
+                <div class="name">Amrin Jaffni</div>
+                <div class="position">Backend developer and<br>translator</div>
+                <div class="message">Hoping to build project for those in needs</div>
+                <div class="socmed">
+                    <a href="https://github.com/indev-aj" target="_blank"><img src="./icons/github.png" id="github-img" alt="github icon"></a>
+                    <a href="https://www.linkedin.com/in/amrin-jaffni/" target="_blank"><img src="./icons/linkedin.png" alt="github icon"></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="tech-stack">
-        <div class="tech-stack-title">Tech Stack</div>
-        <div class="tech-icons">
-            <div class="icon-box"><img src="./icons/tech/html-5.png" alt="html logo" title="HTML"></div>
-            <div class="icon-box"><img src="./icons/tech/css-3.png" alt="css logo" title="CSS"></div>
-            <div class="icon-box"><img src="./icons/tech/javascript.jpg" alt="javascript logo" title="Javascript"></div>
-            <div class="icon-box"><img src="./icons/tech/php.png" alt="php logo" title="PHP"></div>
-            <div class="icon-box"><img src="./icons/tech/mysql.png" alt="mysql logo" title="MySQL"></div>
-            <div class="icon-box"><img src="./icons/tech/python.png" alt="python logo" title="Python"></div>
-            <div class="icon-box"><img src="./icons/tech/django.png" alt="django logo" title="Django"></div>
-            <div class="icon-box"><img src="./icons/tech/flutter.png" alt="flutter logo" title="Flutter"></div>
-            <div class="icon-box"><img src="./icons/tech/office.png" alt="office logo" title="MS Office"></div>
-            <div class="icon-box"><img src="./icons/tech/vscode.png" alt="vscode logo" title="VS Code"></div>
-           
+        <div class="tech-stack">
+            <div class="tech-stack-title">Tech Stack</div>
+            <div class="tech-icons">
+                <?php
+
+                $user_id = $user['id'];
+                $sql = "SELECT * FROM Skill where user_id='$user_id'";
+                $result = $conn->query($sql);
+                $skill;
+
+                if ($result->num_rows > 0) {
+
+                    while ($skill = $result->fetch_assoc()) {
+                        $icon = substr($skill['icon'], 2);
+                        $icon = "admin" . $icon;
+                        $icon = str_replace(' ', '%20', $icon);
+                ?>
+
+                        <div class="icon-box"><img src=<?= $icon ?> alt="html logo" title=<?= $skill['title'] ?>></div>
+                <?php }
+                } ?>
+            </div>
         </div>
+
+        <!-- Footer -->
+
     </div>
-
-    <!-- Footer -->
-
-</div>
 
 </body>
+
 </html>

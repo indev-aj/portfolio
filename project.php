@@ -66,10 +66,3 @@
 </body>
 
 </html>
-
-This project is aimed to develop a centralised graphical user interface (GUI) control for 
-microscopes with the use of Nvidia Jetson Nano and ImSwitch library. Currently, user will 
-have to control each of microscope's element by hand, including turning on and off lasers, 
-and controlling MEMS mirrors. This project will develop a centralised GUI control which will
-communicate with the microscope's element such as automated translation stages, lasers, MEMS mirror 
-and micro-optical cameras.
