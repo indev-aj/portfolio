@@ -65,3 +65,12 @@ function changeTheme() {
         localStorage.removeItem("theme");
     }
 }
+
+function getSummary() {
+
+    // get summary
+    input_summary = document.getElementById("input-summary");
+    summary = document.getElementsByClassName("input-summary")[0];
+    
+    input_summary.value = summary.innerText;
+}
