@@ -1,3 +1,49 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$vendor = './vendor/autoload.php';
+include('./admin/service/db.php');
+require_once realpath($vendor);
+
+require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require './vendor/phpmailer/phpmailer/src/Exception.php';
+require './vendor/phpmailer/phpmailer/src/SMTP.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/admin/service");
+$dotenv->load();
+
+if (isset($_POST['submit'])) {
+    $sender_email = !empty($_POST["email"]) ? $conn->real_escape_string($_POST['email']) : "";
+    $sender_name = !empty($_POST["name"]) ? $conn->real_escape_string($_POST['name']) : "";
+    $subject = !empty($_POST["subject"]) ? $conn->real_escape_string($_POST['subject']) : "";
+    $message = !empty($_POST["input-summary"]) ? $conn->real_escape_string($_POST['input-summary']) : "";
+
+    $mail = new PHPMailer();
+
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'mail.indevtechnology.com';  // SMTP server
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['SERVER_EMAIL'];
+        $mail->Password = $_ENV['DB_PASSWORD'];
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+
+        $mail->setFrom($sender_email, $sender_name);
+        $mail->addAddress($_ENV['SERVER_EMAIL']);
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+
+        $mail->send();
+    } catch (Exception $e) {
+        echo 'Email sending failed: ' . $mail->ErrorInfo;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
