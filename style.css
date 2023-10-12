@@ -45,11 +45,24 @@ img {
     font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; /* Add this line to center vertically */
+    height: 70px; /* Define a height for the container */
 }
 
 .logo a {
     text-decoration: none;
     color: #ffffff;
+}
+
+.logo img {
+    box-shadow: none;
+    border-radius: none;
+    object-fit: fill;
+    width: 150px;
+    cursor: pointer;
 }
 
 .navbar {
@@ -440,7 +453,7 @@ input[type="password"] {
         padding: 15px 0px;
         position: absolute;
         left: -100%;
-        top: 50px;
+        top: 80px;
         flex-direction: column;
         background-color: #282B30;
         width: 100%;

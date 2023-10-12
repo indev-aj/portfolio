@@ -2,7 +2,7 @@
 
 <!-- Navbar -->
 <div class="header-container">
-    <div class="logo"><a href="./index.php">INDEV</a></div>
+    <div class="logo" onclick="location.href = './index.php';"><img src="./images/indev-stroke.png"></div>
     <div class="navbar">
         <ul class="nav-list">
             <li><a href="./index.php">About</a></li>
@@ -22,3 +22,4 @@
 </div>
 
 <script src="./script.js"></script>
+

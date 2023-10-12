@@ -17,7 +17,7 @@ function menu() {
 
 // Set active class to change the styling on navbar items
 // Skip the first element cuz that's logo
-for (let i = 1; i < links.length; i++) {
+for (let i = 0; i < links.length; i++) {
     if (links[i].href === currentLocation || (currentLocation.endsWith("/") && links[i].href.endsWith("index.php"))) {
         links[i].className = "active";
     }
