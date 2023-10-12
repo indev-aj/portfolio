@@ -5,7 +5,7 @@ It uses 2 additional library:
 - Dotenv
 - PHPMailer
 
-Check out the [website](www.indevtechnology.com).
+Check out the [website](https://indevtechnology.com/portfolio/).
 
 ### Installation
 1) Clone this repo `https://github.com/indev-aj/portfolio.git`
