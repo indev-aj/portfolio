@@ -53,7 +53,7 @@
                 <?php
 
                 $user_id = $user['id'];
-                $sql = "SELECT * FROM Skill where user_id='$user_id'";
+                $sql = "SELECT * FROM Skill where user_id='$user_id' ORDER BY FIELD(type, 'programming', 'framework', 'software', 'hardware', 'others')";
                 $result = $conn->query($sql);
                 $skill;
 
