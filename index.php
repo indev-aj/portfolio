@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" type="image/png" href="./images/favicon.webp">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         <!-- Body -->
         <div class="self-intro">
             <div class="potrait">
-                <img src="<?php echo "./admin/" . $thumbnail ?>" alt="">
+                <img src="<?php echo "./admin/" . $thumbnail ?>" alt="" loading="lazy">
             </div>
 
             <div class="text">
@@ -66,7 +66,7 @@
                         $icon = str_replace(' ', '%20', $icon);
                 ?>
 
-                        <div class="icon-box"><img src=<?= $icon ?> alt="html logo" title=<?= $skill['title'] ?>></div>
+                        <div class="icon-box"> <img src=<?= $icon ?> alt="html logo" title=<?= $skill['title'] ?> loading="lazy"> </div>
                 <?php }
                 } ?>
             </div>

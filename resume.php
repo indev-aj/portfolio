@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" type="image/png" href="./images/favicon.webp">
 </head>
 
 <body>
@@ -17,7 +17,12 @@
 
         <?php include_once('header.php') ?>
         
-        <?php include_once('./dev/wip.php') ?>
+        <div class="main-section">
+
+            <!-- <iframe src="./resume.pdf" frameborder="0" width="100%" height="1000px"></iframe> -->
+            <object data="./resume.pdf" type="application/pdf" width="100%" height="1000px"></object>
+
+        </div>
 
     </div>
 

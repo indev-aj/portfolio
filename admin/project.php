@@ -56,6 +56,8 @@
                     <input type="submit" value="submit" name='submit' class="submit-btn" onclick="getSummary()">
                 </form>
             </div>
+
+            <?php include('./service/retrieve_project.php'); ?>
         </div>
 
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="icon" type="image/png" href="./images/favicon.webp">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         $stmt->bind_result($user_id);
         $stmt->fetch();
         $stmt->close();
-        
+
 
         ?>
 
@@ -43,22 +43,22 @@
 
                 if ($result->num_rows > 0) {
 
-                    while($user = $result->fetch_assoc()) { 
+                    while ($user = $result->fetch_assoc()) {
                         $thumbnail = substr($user['thumbnail'], 2);
                         $thumbnail = "admin" . $thumbnail;
                         $thumbnail = str_replace(' ', '%20', $thumbnail);
-                        ?>
+                ?>
                         <div class="project">
-                        <div class="project-thumbnail">
-                            <img src=<?= $thumbnail?> alt="project image">
+                            <div class="project-thumbnail">
+                                <img src=<?= $thumbnail ?> alt="project image">
+                            </div>
+                            <div class="project-title"><?= $user['title'] ?></div>
+                            <div class="project-subtitle"><?= $user['subtitle'] ?></div>
+                            <div class="project-summary"><?= $user['summary'] ?></div>
                         </div>
-                        <div class="project-title"><?= $user['title'] ?></div>
-                        <div class="project-subtitle"><?= $user['subtitle'] ?></div>
-                        <div class="project-summary"><?= $user['summary'] ?></div>
-                    </div>
-                    
+
                 <?php }
-                 } ?>
+                } ?>
             </div>
         </div>
     </div>
