@@ -26,6 +26,10 @@ img {
     justify-content: center;
 }
 
+.card-project {
+    padding: 25px;
+}
+
 /* Form Fields Styling */
 
 form {
@@ -227,6 +231,18 @@ input[type="month"] {
     margin-top: 40px;
 }
 
+/* *************** */
+/* Project Styling */
+/* *************** */
+
+.admin-project {
+    text-align: left;
+    margin-bottom: 0px;
+}
+.admin-project img {
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, .25);
+    border-radius: 15px;
+}
 /* Mobile Responsive Layout */
 
 @media screen and (max-width: 768px) {
@@ -314,3 +330,4 @@ input[type="month"] {
     }
 
 }
+
