@@ -1,3 +1,32 @@
+<?php
+
+
+include_once("./service/db.php");
+session_start();
+$user = $_SESSION['user'];
+$user_id = $user['id'];
+
+if (isset($_REQUEST)) {
+    $project_id = $_POST['project-id'];
+
+    if (isset($_POST['edit'])) {
+        echo "Edit project";
+    }
+
+    if (isset($_POST['delete'])) {
+        $sql = "DELETE FROM Project WHERE id='$project_id'";
+        if ($conn->query($sql)) {
+            echo "Deletion successful";
+        } else {
+            echo "Error: " . $conn->error;
+        }
+
+        echo "Delete project";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,8 +77,8 @@
                         <div class="col-item">
                             <label class="preview-label">thumbnail preview</label>
 
-                            
-                            <img src="<?php if(!empty($user['thumbnail']))  echo "admin/" . $user['thumbnail']; else echo "../images/350x250.svg";?>" alt="" class="preview-img preview-img-project">
+
+                            <img src="../images/350x250.svg" alt="" class="preview-img preview-img-project">
                         </div>
                     </div>
 

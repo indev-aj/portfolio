@@ -73,6 +73,8 @@ input[type="month"] {
 }
 
 .submit-btn,
+.delete-project-btn,
+.edit-project-btn,
 .add-task-btn {
     background-color: #3F8CFF;
     color: white;
@@ -91,6 +93,20 @@ input[type="month"] {
 .submit-btn:hover {
     background-color: #6C5DD3;
     transition: all 0.3s ease-in-out;
+}
+
+.edit-project-btn, .delete-project-btn {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 18px;
+}
+
+.delete-project-btn {
+    background-color: red;
+}
+
+.edit-form > .col-item {
+    width: 120px;
 }
 
 .column {
@@ -297,10 +313,14 @@ input[type="month"] {
         width: 100%;
     }
 
-    .submit-btn {
+    .submit-btn{
         font-size: 18px;
         height: fit-content;
         margin: 50px auto 0px auto;
+    }
+
+    .edit-project-btn, .delete-project-btn {
+        margin-bottom: 15px;
     }
 
     .add-task-btn {
