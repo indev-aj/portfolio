@@ -72,6 +72,20 @@
             </div>
         </div>
 
+        <!-- Certificate Section -->
+
+        <div class="certificate-section">
+            <div class="certificate-section-title">Certificates</div>
+            <div class="certificates">
+                <div class="certificate">
+                    <div class="certificate-img">
+                        <img src="https://via.placeholder.com/1920x1080/eee?text=16:9" alt="">
+                    </div>
+                    <div class="certificate-title">Laravel Masterclass</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer -->
 
     </div>
