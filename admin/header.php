@@ -11,6 +11,7 @@ include("./service/auth_session.php");
             <li><a href="./project.php">Project</a></li>
             <li><a href="./experience.php">Experience</a></li>
             <li><a href="./award.php">Award</a></li>
+            <li><a href="./certificate.php">Certificate</a></li>
             <li><a href="./skill.php">Skill</a></li>
             <li><a href="./bio.php">Bio</a></li>
             <li><a href="./service/logout.php">Logout</a></li>

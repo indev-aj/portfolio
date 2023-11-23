@@ -72,6 +72,11 @@ input[type="month"] {
     margin-right: 0;
 }
 
+/* Date input for certification */
+.cert-date {
+    width: 100% !important;
+}
+
 .submit-btn,
 .delete-project-btn,
 .edit-project-btn,
@@ -169,6 +174,10 @@ input[type="month"] {
     width: 350px;
     border-radius: 15px;
     object-fit: cover;
+}
+
+.preview-img-cert {
+    width: 400px;
 }
 
 /* ************* */
