@@ -37,7 +37,7 @@
             <div class="projects">
                 <?php
 
-                $sql = "SELECT * FROM Project WHERE user_id='$user_id'";
+                $sql = "SELECT * FROM Project WHERE user_id='$user_id' ORDER BY date DESC";
                 $result = $conn->query($sql);
                 $user;
 
