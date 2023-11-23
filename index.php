@@ -77,12 +77,31 @@
         <div class="certificate-section">
             <div class="certificate-section-title">Certificates</div>
             <div class="certificates">
+
+                <?php
+                $sql = "SELECT * FROM Certificate where user_id='$user_id' ORDER BY date DESC";
+                $result = $conn->query($sql);
+                $cert;
+
+                if ($result->num_rows > 0) {
+
+                    while ($cert = $result->fetch_assoc()) {
+                        $thumbnail = substr($cert['thumbnail'], 2);
+                        $thumbnail = "admin" . $thumbnail;
+                        $thumbnail = str_replace(' ', '%20', $thumbnail);
+                ?>
+
                 <div class="certificate">
                     <div class="certificate-img">
-                        <img src="https://via.placeholder.com/1920x1080/eee?text=16:9" alt="">
+                        <img src=<?= $thumbnail ?> alt="certificate image">
                     </div>
-                    <div class="certificate-title">Laravel Masterclass</div>
+                    <div class="certificate-title"><?= $cert['title'] ?></div>
+                
                 </div>
+
+                <?php }
+                } ?>
+               
             </div>
         </div>
 
