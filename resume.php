@@ -19,8 +19,10 @@
         
         <div class="main-section">
 
-            <!-- <iframe src="./resume.pdf" frameborder="0" width="100%" height="1000px"></iframe> -->
-            <object data="./resume.pdf" type="application/pdf" width="100%" height="1000px"></object>
+            <iframe src="./resume.pdf" frameborder="0" width="100%" height="1000px"></iframe>
+            <!-- <object data="./resume.pdf" type="application/pdf" width="100%" height="1000px">
+                <p>Alternative <a href="./resume.pdf"></a></p>
+            </object> -->
 
         </div>
 
